@@ -33,7 +33,7 @@ class Vertex implements Comparable<Vertex>{
         return this.label == otherV.label;
     }
 
-    void addEdge(Vertex v1, Vertex v2)
+    static void addEdge(Vertex v1, Vertex v2)
     {
         try{
             v1.addNeighbour(v2);
