@@ -1,20 +1,22 @@
 package MBEA;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class VertexSet {
-    ArrayList<Vertex> setV = new ArrayList<>();
+public class VertexSet extends Vertex{
+    private List<Vertex> setV = new ArrayList<>();
 
-    VertexSet()
-    {
-
-    }
-
-    VertexSet(ArrayList<Vertex> nodesIn)
+    VertexSet(){}
+    VertexSet(List<Vertex> nodesIn)
     {
         setV = nodesIn;
+    }
+
+    List<Vertex> getSetV()
+    {
+        return setV;
     }
 
     void addVertex(Vertex v)
@@ -44,9 +46,9 @@ public class VertexSet {
         });
     }
 
-    ArrayList<Vertex> getSetV()
+    Vertex getVertex(int i)
     {
-        return setV;
+        return setV.get(i);
     }
 
     int getSize()
@@ -54,8 +56,8 @@ public class VertexSet {
         return setV.size();
     }
 
-    Vertex getVertex(int i)
+    boolean isSetEmpty()
     {
-        return setV.get(i);
+        return setV.isEmpty();
     }
 }
