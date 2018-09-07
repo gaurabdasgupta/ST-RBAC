@@ -3,12 +3,12 @@ package MBEA;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BipartiteGraph extends VertexSet {
+public class BipartiteGraph {
     private List<List<Integer>> incidenceMatrix = new ArrayList<>();
-    private List<Vertex> leftNodes = new ArrayList<>();
-    private List<Vertex> rightNodes = new ArrayList<>();
-    private List<List<Vertex>> leftNeighbours = new ArrayList<>();
-    private List<List<Vertex>> rightNeighbours = new ArrayList<>();
+    protected List<Vertex> leftNodes = new ArrayList<>();
+    protected List<Vertex> rightNodes = new ArrayList<>();
+    List<List<Vertex>> leftNeighbours = new ArrayList<>();
+    List<List<Vertex>> rightNeighbours = new ArrayList<>();
     BipartiteGraph() {}
     BipartiteGraph(List<List<Integer>> incMat)
     {
@@ -119,11 +119,10 @@ public class BipartiteGraph extends VertexSet {
 
     String getNeighbourhoodString(List<List<Vertex>> neighbours)
     {
-        String res = null;
+        String res = "";
         for(int i=0;i<neighbours.size();i++)
         {
-            List<Vertex> nvList = new ArrayList<Vertex>();
-            nvList = neighbours.get(i);
+            List<Vertex> nvList = neighbours.get(i);
             for(int j=0;j<nvList.size();j++)
             {
                 Vertex v = nvList.get(j);

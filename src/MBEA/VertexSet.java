@@ -36,7 +36,7 @@ public class VertexSet extends Vertex{
         return setV.equals(other.setV);
     }
 
-    void sortByNumOfNeighbours()
+    List<Vertex> sortByNumOfNeighbours()
     {
         Collections.sort(setV, new Comparator<Vertex>() {
             @Override
@@ -44,6 +44,8 @@ public class VertexSet extends Vertex{
                 return o1.getNeighboursSize() - o2.getNeighboursSize();
             }
         });
+
+        return setV;
     }
 
     Vertex getVertex(int i)
@@ -59,5 +61,13 @@ public class VertexSet extends Vertex{
     boolean isSetEmpty()
     {
         return setV.isEmpty();
+    }
+
+    String toStringVertexSet()
+    {
+        String res = "";
+        for (Vertex v:setV)
+            res += Integer.toString(v.getLabel())+ " ";
+        return res;
     }
 }

@@ -8,76 +8,42 @@ class Vertex implements Comparable<Vertex>{
     private List<Vertex> neighbours = new ArrayList<>();
 
     Vertex(){}
-    Vertex(int label)
-    {
-        this.label = label;
-    }
+    Vertex(int label) { this.label = label; }
 
-    List<Vertex> getNeighbours()
-    {
-        return neighbours;
-    }
+    List<Vertex> getNeighbours() { return neighbours; }
+
     int getLabel() { return label; }
 
-    private void addNeighbour(Vertex v) throws RuntimeException
+    private void addNeighbour(Vertex v)
     {
-        if(neighbours.contains(v))
-            throw new RuntimeException("already a neighbour");
-        else
+        if(!neighbours.contains(v))
             neighbours.add(v);
+
     }
 
     private void removeNeighbour(Vertex v)
     {
         if(neighbours.contains(v))
-        {
-            neighbours.remove(v);
-        }
-        else
             System.out.println("vertex not present");
+        else
+            neighbours.remove(v);
     }
 
     static void addEdge(Vertex v1, Vertex v2)
     {
-        try{
-            v1.addNeighbour(v2);
-        }
-        catch (RuntimeException e)
-        {
-            e.printStackTrace();
-        }
-
-        try{
-            v2.addNeighbour(v1);
-        }
-        catch (RuntimeException e)
-        {
-            e.printStackTrace();
-        }
+        v1.addNeighbour(v2);
+        v2.addNeighbour(v1);
     }
 
     void removeEdge(Vertex v1, Vertex v2)
     {
-        try{
             v1.removeNeighbour(v2);
-        }
-        catch (RuntimeException e)
-        {
-            e.printStackTrace();
-        }
-
-        try{
             v2.removeNeighbour(v1);
-        }
-        catch (RuntimeException e)
-        {
-            e.printStackTrace();
-        }
     }
 
     boolean isEqual(Vertex otherV)
     {
-        return this.label == otherV.label;
+        return this.label == otherV.getLabel();
     }
 
     int getNeighboursSize()
@@ -85,7 +51,7 @@ class Vertex implements Comparable<Vertex>{
         return neighbours.size();
     }
 
-    private boolean isNeighbour(Vertex otherV)
+    boolean isNeighbour(Vertex otherV)
     {
         return neighbours.contains(otherV);
     }
@@ -108,12 +74,13 @@ class Vertex implements Comparable<Vertex>{
         boolean out = false;
         for(Vertex v:set)
         {
-            if(this.label == v.label) //TODO DOUBT
+            if(this.equals(v)) //TODO DOUBT
                 out = true;
 
         }
         return out;
     }
+
 
     public int compareTo(Vertex other)
     {
