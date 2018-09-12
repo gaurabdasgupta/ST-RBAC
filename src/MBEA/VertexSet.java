@@ -6,9 +6,11 @@ import java.util.Collections;
 import java.util.Comparator;
 
 public class VertexSet extends Vertex{
-    private List<Vertex> setV = new ArrayList<>();
+    private List<Vertex> setV ;
 
-    VertexSet(){}
+    VertexSet(){
+        setV =  new ArrayList<>();
+    }
     VertexSet(List<Vertex> nodesIn)
     {
         setV = nodesIn;
@@ -27,7 +29,7 @@ public class VertexSet extends Vertex{
 
     void removeVertex(Vertex v)
     {
-        if(setV.contains(v))
+//        if(setV.contains(v))
             setV.remove(v);
     }
 

@@ -1,31 +1,40 @@
 package MBEA;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class Solver {
     public static void main(String args[])
     {
-        List<List<Integer>> adjMatrix = new ArrayList<List<Integer>>();
-        adjMatrix.add(Arrays.asList(0, 1, 0, 1));
-        adjMatrix.add(Arrays.asList(0, 1, 1, 0));
-        adjMatrix.add(Arrays.asList(0, 0, 1, 1));
-        adjMatrix.add(Arrays.asList(0, 0, 1, 1));
+        List<List<Integer>> adjMatrix = new ArrayList<>();
+        Scanner input = null;
 
-//        for(List<Integer> v:adjMatrix)
-//            System.out.println(v);
+        try{
+             input = new Scanner(new File("src/MBEA/array.txt"));
+        }
+        catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
 
-//        BipartiteGraph bg = new BipartiteGraph(adjMatrix);
-//        System.out.println(adjMatrix);
-//        System.out.println(bg.transpose(adjMatrix));
-//        bg.sortByNumOfNeighbours();
-//        VertexSet vs = new VertexSet(bg.getLeftNodes());
-//        bg.printNeighbourhoods();
-//        vs.sortByNumOfNeighbours();
-//        vs.printSet();
+        while(input.hasNextLine())
+        {
+            Scanner colReader = new Scanner(input.nextLine());
+            List<Integer> col = new ArrayList<>();
+            while(colReader.hasNextInt())
+            {
+                col.add(colReader.nextInt());
+            }
+            adjMatrix.add(col);
+        }
+
         BicliqueFinder bicliqueFinder = new BicliqueFinder(new BipartiteGraph(adjMatrix));
+
         bicliqueFinder.findMaximalBicliques("standard");
-        System.out.println(bicliqueFinder.toStringBicliqueF());
+
     }
 }

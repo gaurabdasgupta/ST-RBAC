@@ -4,20 +4,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BipartiteGraph {
-    private List<List<Integer>> incidenceMatrix = new ArrayList<>();
-    protected List<Vertex> leftNodes = new ArrayList<>();
-    protected List<Vertex> rightNodes = new ArrayList<>();
-    List<List<Vertex>> leftNeighbours = new ArrayList<>();
-    List<List<Vertex>> rightNeighbours = new ArrayList<>();
-    BipartiteGraph() {}
+    private List<List<Integer>> incidenceMatrix ;
+    protected List<Vertex> leftNodes ;
+    protected List<Vertex> rightNodes ;
+    List<List<Vertex>> leftNeighbours ;
+    List<List<Vertex>> rightNeighbours ;
+    BipartiteGraph() {
+         incidenceMatrix = new ArrayList<>();
+         leftNodes = new ArrayList<>();
+         rightNodes = new ArrayList<>();
+         leftNeighbours = new ArrayList<>();
+         rightNeighbours = new ArrayList<>();
+    }
     BipartiteGraph(List<List<Integer>> incMat)
     {
         incidenceMatrix = incMat;
+        leftNodes = new ArrayList<>();
+        rightNodes = new ArrayList<>();
+        leftNeighbours = new ArrayList<>();
+        rightNeighbours = new ArrayList<>();
 
         checkInput(incidenceMatrix);
 
         int leftStart = 1;
-        int rightStart = incidenceMatrix.size() + 1;
+        int rightStart = incidenceMatrix.size()+1;
 
         List<List<Integer>> transposed = transpose(incidenceMatrix);
 
@@ -42,7 +52,10 @@ public class BipartiteGraph {
                 {
                     Vertex left = leftNodes.get(i);
                     Vertex right = rightNodes.get(j);
-                    Vertex.addEdge(left, right);
+                    try {
+                        Vertex.addEdge(left, right);
+                    } catch (RuntimeException e) {
+                    }
                 }
             }
         }
@@ -117,7 +130,7 @@ public class BipartiteGraph {
         return result;
     }
 
-    String getNeighbourhoodString(List<List<Vertex>> neighbours)
+    private String getNeighbourhoodString(List<List<Vertex>> neighbours)
     {
         String res = "";
         for(int i=0;i<neighbours.size();i++)
@@ -139,6 +152,19 @@ public class BipartiteGraph {
         System.out.println(getNeighbourhoodString(leftNeighbours));
         System.out.println("\n");
         System.out.println(getNeighbourhoodString(rightNeighbours));
+    }
+
+    void printList(List<Vertex> ls)
+
+    {
+        for(Vertex v:ls)
+            System.out.println(v.getLabel());
+    }
+
+    void printGraph()
+    {
+        printList(getLeftNodes());
+        printList(getRightNodes());
     }
 
 
