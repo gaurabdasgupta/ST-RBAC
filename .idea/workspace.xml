@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5944e29b-3eb0-4dc2-8833-89aba2b4ee1c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ST-RBAC/MBEA/Biclique.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ST-RBAC/MBEA/Biclique.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ST-RBAC/MBEA/BicliqueFinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ST-RBAC/MBEA/BicliqueFinder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ST-RBAC/MBEA/BipartiteGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ST-RBAC/MBEA/BipartiteGraph.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ST-RBAC/MBEA/Solver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ST-RBAC/MBEA/Solver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ST-RBAC/MBEA/Vertex.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ST-RBAC/MBEA/Vertex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ST-RBAC/MBEA/VertexSet$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ST-RBAC/MBEA/VertexSet$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ST-RBAC/MBEA/VertexSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ST-RBAC/MBEA/VertexSet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MBEA/Biclique.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MBEA/Biclique.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MBEA/BicliqueFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MBEA/BicliqueFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MBEA/BipartiteGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MBEA/BipartiteGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MBEA/Solver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MBEA/Solver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MBEA/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MBEA/Vertex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MBEA/VertexSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MBEA/VertexSet.java" afterDir="false" />
-    </list>
+    <list default="true" id="5944e29b-3eb0-4dc2-8833-89aba2b4ee1c" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/src/MBEA/Biclique.java">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
+              <caret column="13" selection-start-column="13" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#410#411#0" expanded="true" />
@@ -87,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/src/MBEA/BipartiteGraph.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1511">
-              <caret line="160" column="45" lean-forward="true" selection-start-line="160" selection-start-column="45" selection-end-line="160" selection-end-column="45" />
+              <caret line="160" column="45" selection-start-line="160" selection-start-column="45" selection-end-line="160" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,8 +83,8 @@
       <file leaf-file-name="BicliqueFinder.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MBEA/BicliqueFinder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-29">
-              <caret line="146" column="25" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
+            <state relative-caret-position="2475">
+              <caret line="165" column="35" selection-start-line="165" selection-start-column="35" selection-end-line="165" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -171,32 +156,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ST-RBAC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ST-RBAC" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ST-RBAC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ST-RBAC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ST-RBAC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ST-RBAC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="MBEA" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
@@ -559,7 +519,7 @@
     <entry file="file://$PROJECT_DIR$/src/MBEA/Biclique.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#410#411#0" expanded="true" />
@@ -609,7 +569,7 @@
     <entry file="file://$PROJECT_DIR$/src/MBEA/BipartiteGraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1511">
-          <caret line="160" column="45" lean-forward="true" selection-start-line="160" selection-start-column="45" selection-end-line="160" selection-end-column="45" />
+          <caret line="160" column="45" selection-start-line="160" selection-start-column="45" selection-end-line="160" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -639,8 +599,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MBEA/BicliqueFinder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-29">
-          <caret line="146" column="25" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
+        <state relative-caret-position="2475">
+          <caret line="165" column="35" selection-start-line="165" selection-start-column="35" selection-end-line="165" selection-end-column="35" />
         </state>
       </provider>
     </entry>

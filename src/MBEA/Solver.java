@@ -3,7 +3,6 @@ package MBEA;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -13,8 +12,9 @@ public class Solver {
         List<List<Integer>> adjMatrix = new ArrayList<>();
         Scanner input = null;
 
-        try{
-             input = new Scanner(new File("src/MBEA/array.txt"));
+        try
+        {
+             input = new Scanner(new File(args[0]));
         }
         catch (FileNotFoundException e)
         {
