@@ -71,11 +71,10 @@ public class BicliqueFinder extends Biclique {
 
     private void bicliqueFind(VertexSet inL, VertexSet inR, VertexSet inP, VertexSet inQ)
     {
-        VertexSet L = inL;
-        VertexSet R = inR;
-        VertexSet P = inP;
-        VertexSet Q = inQ;
-        int recurrenceCondition = 0;
+        VertexSet L = new VertexSet(inL.getSetV());
+        VertexSet R = new VertexSet(inR.getSetV());
+        VertexSet P = new VertexSet(inP.getSetV());
+        VertexSet Q = new VertexSet(inQ.getSetV());
 //        System.out.println("L: "+L.toStringVertexSet());
 //        System.out.println("R: "+R.toStringVertexSet());
 //        System.out.println("P: "+P.toStringVertexSet());
@@ -85,11 +84,7 @@ public class BicliqueFinder extends Biclique {
         {
             Vertex x = P.getVertex(0);
             //System.out.println("x: "+x.getLabel());
-            VertexSet Rprime;
-            if(recurrenceCondition==0)
-                Rprime = R;
-            else
-                Rprime = new VertexSet();
+            VertexSet Rprime = new VertexSet(R.getSetV());
             Rprime.addVertex(x);
             //System.out.println("Rpr: "+Rprime.toStringVertexSet());
 
@@ -167,10 +162,7 @@ public class BicliqueFinder extends Biclique {
                 if(!Pprime.isSetEmpty()){
                    // System.out.println("calling again");
                     bicliqueFind(Lprime,Rprime,Pprime,Qprime);
-                    recurrenceCondition = 1;
                 }
-                else
-                    recurrenceCondition = 1;
 
             }
             P.removeVertex(x);

@@ -12,7 +12,7 @@ Run the JAR file with the binary matrix file as argument:
 
 Go to the `examples` directory and execute it:
 
-`java -jar MBEA.jar matrix.txt`
+`java -jar ST-RBAC.jar matrix.txt`
 
 ### TODO:
 - Implement the improved version of MBEA algorithm

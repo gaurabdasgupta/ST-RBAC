@@ -71,7 +71,7 @@ public class Biclique extends BipartiteGraph{
         return res;
     }
 
-   private String getNeighbourhoodString(List<List<Vertex>> neighbours)
+   public String getNeighbourhoodString(List<List<Vertex>> neighbours)
    {
        String res = "";
        for(int i=0;i<neighbours.size();i++)

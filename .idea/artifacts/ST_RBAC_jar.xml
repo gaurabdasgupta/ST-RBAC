@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ST-RBAC:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ST_RBAC_jar</output-path>
+    <root id="archive" name="ST-RBAC.jar">
+      <element id="module-output" name="ST-RBAC" />
+    </root>
+  </artifact>
+</component>
