@@ -172,27 +172,21 @@ public class BicliqueFinder extends Biclique {
         }
     }
 
-    // TODO debug improved algo
     private void bicliqueFindimP(VertexSet inL, VertexSet inR, VertexSet inP, VertexSet inQ)
     {
-        VertexSet L = inL;
-        VertexSet R = inR;
-        VertexSet P = inP;
-        VertexSet Q = inQ;
-        int recurrenceCondition = 0;
+        VertexSet L = new VertexSet(inL.getSetV());
+        VertexSet R = new VertexSet(inR.getSetV());
+        VertexSet P = new VertexSet(inP.getSetV());
+        VertexSet Q = new VertexSet(inQ.getSetV());
 
         while (!P.isSetEmpty())
         {
             Vertex x = P.getVertex(0);
-            VertexSet Rprime;
-            if(recurrenceCondition==0)
-                Rprime = R;
-            else
-                Rprime = new VertexSet();
+            VertexSet Rprime = new VertexSet(R.getSetV());
             Rprime.addVertex(x);
 
             VertexSet Lprime = new VertexSet();
-            VertexSet overlineLprime = L;
+            VertexSet overlineLprime = new VertexSet(L.getSetV());
             VertexSet C = new VertexSet();
 
             for(int j=0;j<L.getSize();j++)
@@ -254,10 +248,8 @@ public class BicliqueFinder extends Biclique {
 
                 if(!Pprime.isSetEmpty()){
                     bicliqueFindimP(Lprime,Rprime,Pprime,Qprime);
-                    recurrenceCondition = 1;
                 }
-                else
-                    recurrenceCondition = 1;
+
 
             }
 
