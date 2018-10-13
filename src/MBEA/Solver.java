@@ -9,6 +9,7 @@ import java.util.*;
 public class Solver {
     public static void main(String args[])
     {
+
     // ****TEST 1: To test MBEA/MBC with small manually generated adjacency matrices****
 
 //        List<List<Integer>> adjMatrix = new ArrayList<>();
@@ -74,50 +75,76 @@ public class Solver {
 //        System.out.println("MBEA size:"+bicliqueFinder.getMBC().size());
 //        System.out.println("Total execution time: " + (endTime-startTime) + "ms");
 
-    //    TEST 3: Comparing |R| with A. Ene, W. Horne, N. <ilosavlevic et al., 2008 datasets used for testing their greedy MBC
+    //    ****TEST 3: Comparing |R| with A. Ene, W. Horne, N. <ilosavlevic et al., 2008 datasets used for testing their greedy MBC****
+
+
         List<List<Integer>> UA = new ArrayList<>();
         List<List<Integer>> PA = new ArrayList<>();
         List<List<Integer>> UPA = new ArrayList<>();
         Scanner input = null;
-        int UArowNum=0,UAcolNum=0,PAcolNum=0;
+        int UArowNum=0,UAcolNum=0,PAcolNum=0,PArowNum=0;
+        int t=0,k=0;
 
         try {
-            input = new Scanner(new File("UA_hc.txt"));
+            input = new Scanner(new File("datasets/MBC_greedy/UA_emea.txt"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 
-        while (input.hasNextLine()) {
-            Scanner colReader = new Scanner(input.nextLine());
-            UArowNum = colReader.nextInt();
-            UAcolNum = colReader.nextInt();
-            List<Integer> col = new ArrayList<>();
-            while (colReader.hasNextInt()) {
-                col.add(colReader.nextInt());
+
+        while(input.hasNextLine())
+        {
+            if(t==0){
+                UArowNum = Integer.parseInt(input.nextLine());
+                UAcolNum = Integer.parseInt(input.nextLine());
+                t++;
             }
-            UA.add(col);
+            else
+                {
+                    Scanner colReader = new Scanner(input.nextLine());
+                    List<Integer> col = new ArrayList<>();
+                    while (colReader.hasNextInt()) {
+                        col.add(colReader.nextInt());
+                    }
+                    UA.add(col);
+            }
         }
 
         try {
-            input = new Scanner(new File("PA_hc.txt"));
+            input = new Scanner(new File("datasets/MBC_greedy/PA_emea.txt"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 
-        while (input.hasNextLine()) {
-            Scanner colReader = new Scanner(input.nextLine());
-            PAcolNum = colReader.nextInt();
-            List<Integer> col = new ArrayList<>();
-            while (colReader.hasNextInt()) {
-                col.add(colReader.nextInt());
-            }
-            PA.add(col);
-        }
-        System.out.println(UArowNum);
-//        int UArowNum = 3485;
-//        int UAcolNum = 421;
-//        int PAcolNum = 10127;
+        while (input.hasNextLine())
+        {
 
+            if(k==0) {
+                  PArowNum = Integer.parseInt(input.nextLine());
+                PAcolNum = Integer.parseInt(input.nextLine());
+                k++;
+            }
+            else
+                {
+                    Scanner colReader = new Scanner(input.nextLine());
+                    List<Integer> col = new ArrayList<>();
+                    while (colReader.hasNextInt()) {
+                        col.add(colReader.nextInt());
+                    }
+                    PA.add(col);
+                }
+
+
+        }
+//        System.out.println("row"+UArowNum);
+//        System.out.println("col"+UAcolNum);
+//        System.out.println(UA.size());
+//        for(int q=0;q<UArowNum;q++)
+//        {
+//            for (int p = 0; p <UAcolNum; p++)
+//                System.out.print(UA.get(q).get(p));
+//            System.out.println();
+//        }
         for(int i=0;i<UArowNum;i++)
         {
             List<Integer> index = new ArrayList<>();
@@ -142,12 +169,7 @@ public class Solver {
 
         System.out.println(UPA.size());
         System.out.println(UPA.get(0).size());
-//        for(int q=0;q<UArowNum;q++)
-//        {
-//            for (int p = 0; p <PAcolNum; p++)
-//                System.out.print(UPA.get(q).get(p));
-//            System.out.println();
-//        }
+
 
         BicliqueFinder bicliqueFinder = new BicliqueFinder(new BipartiteGraph(UPA));
 

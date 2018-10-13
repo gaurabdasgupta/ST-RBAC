@@ -6,19 +6,31 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/MBEA/Solver.java" line="101" />
+    <bookmark url="file://$PROJECT_DIR$/src/MBEA/Solver.java" line="111" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5944e29b-3eb0-4dc2-8833-89aba2b4ee1c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ST_RBAC_jar/ST-RBAC.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ST_RBAC_jar/ST-RBAC.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ST-RBAC/MBEA/BicliqueFinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ST-RBAC/MBEA/BicliqueFinder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PA_hc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PA_hc.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UA_hc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/UA_hc.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/MBC_greedy/PA_americas_large.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/MBC_greedy/PA_americas_large.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/MBC_greedy/PA_americas_small.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/MBC_greedy/PA_americas_small.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/MBC_greedy/PA_apj.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/MBC_greedy/PA_apj.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/MBC_greedy/PA_customer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/MBC_greedy/PA_customer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/MBC_greedy/PA_domino.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/MBC_greedy/PA_domino.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/MBC_greedy/PA_fire1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/MBC_greedy/PA_fire1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/MBC_greedy/PA_fire2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/MBC_greedy/PA_fire2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/MBC_greedy/PA_hc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/MBC_greedy/PA_hc.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/MBC_greedy/UA_americas_large.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/MBC_greedy/UA_americas_large.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/MBC_greedy/UA_americas_small.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/MBC_greedy/UA_americas_small.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/MBC_greedy/UA_apj.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/MBC_greedy/UA_apj.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/MBC_greedy/UA_customer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/MBC_greedy/UA_customer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/MBC_greedy/UA_domino.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/MBC_greedy/UA_domino.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/MBC_greedy/UA_fire1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/MBC_greedy/UA_fire1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/MBC_greedy/UA_fire2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/MBC_greedy/UA_fire2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/MBC_greedy/UA_hc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/MBC_greedy/UA_hc.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ST-RBAC/MBEA/Solver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ST-RBAC/MBEA/Solver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ST-RBAC/MBEA/Vertex.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ST-RBAC/MBEA/Vertex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ST-RBAC/MBEA/VertexSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ST-RBAC/MBEA/VertexSet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MBEA/BicliqueFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MBEA/BicliqueFinder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MBEA/Solver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MBEA/Solver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MBEA/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MBEA/Vertex.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,7 +95,7 @@
       <file leaf-file-name="BicliqueFinder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MBEA/BicliqueFinder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="4950">
               <caret line="335" column="34" selection-start-line="335" selection-start-column="34" selection-end-line="335" selection-end-column="34" />
             </state>
           </provider>
@@ -92,11 +104,10 @@
       <file leaf-file-name="Solver.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MBEA/Solver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="81" column="44" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
+            <state relative-caret-position="2550">
+              <caret line="170" column="46" lean-forward="true" selection-start-line="170" selection-start-column="46" selection-end-line="170" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1539443487393" expanded="true" signature="5100:5668" ph="..." />
               </folding>
             </state>
           </provider>
@@ -173,7 +184,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -196,6 +206,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -313,7 +324,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="0" width="1370" height="770" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32732734" />
@@ -321,9 +331,9 @@
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" x="1363" y="25" width="1372" height="746" id="Run" order="2" type="WINDOWED" weight="0.7732733" />
+      <window_info anchor="bottom" x="-3" y="25" width="1372" height="746" id="Run" order="2" type="WINDOWED" weight="0.7732733" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.109077595" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15373352" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="4" side_tool="true" />
@@ -413,7 +423,6 @@
           <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1539443487393" expanded="true" signature="5100:5668" ph="..." />
           </folding>
         </state>
       </provider>
@@ -815,18 +824,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MBEA/BicliqueFinder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="4950">
           <caret line="335" column="34" selection-start-line="335" selection-start-column="34" selection-end-line="335" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MBEA/Solver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="81" column="44" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
+        <state relative-caret-position="2550">
+          <caret line="170" column="46" lean-forward="true" selection-start-line="170" selection-start-column="46" selection-end-line="170" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1539443487393" expanded="true" signature="5100:5668" ph="..." />
           </folding>
         </state>
       </provider>
