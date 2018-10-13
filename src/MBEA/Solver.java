@@ -1,53 +1,59 @@
 package MBEA;
 
+import javafx.util.Pair;
+
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Solver {
     public static void main(String args[])
     {
-        List<List<Integer>> adjMatrix = new ArrayList<>();
-        Scanner input = null;
+    // ****TEST 1: To test MBEA/MBC with small manually generated adjacency matrices****
 
-        try
-        {
-             input = new Scanner(new File(args[0]));
-        }
-        catch (FileNotFoundException e)
-        {
-            e.printStackTrace();
-        }
+//        List<List<Integer>> adjMatrix = new ArrayList<>();
+//        Scanner input = null;
+//
+//        try
+//        {
+//            input = new Scanner(new File("matrix3.txt"));
+//        }
+//        catch (FileNotFoundException e)
+//        {
+//            e.printStackTrace();
+//        }
+//
+//        while(input.hasNextLine())
+//        {
+//            Scanner colReader = new Scanner(input.nextLine());
+//            List<Integer> col = new ArrayList<>();
+//            while(colReader.hasNextInt())
+//            {
+//                col.add(colReader.nextInt());
+//            }
+//            adjMatrix.add(col);
+//        }
+//
+//        BicliqueFinder bicliqueFinder = new BicliqueFinder(new BipartiteGraph(adjMatrix));
+//        bicliqueFinder.solve("MBC");
+//        bicliqueFinder.findMinimumBicliqueCover();
+//        System.out.println(bicliqueFinder.toStringBicliqueF(bicliqueFinder.getMaximalBicliques()));
+//        System.out.println(bicliqueFinder.toStringBicliqueF(bicliqueFinder.getMBC()));
 
-        while(input.hasNextLine())
-        {
-            Scanner colReader = new Scanner(input.nextLine());
-            List<Integer> col = new ArrayList<>();
-            while(colReader.hasNextInt())
-            {
-                col.add(colReader.nextInt());
-            }
-            adjMatrix.add(col);
-        }
 
-        BicliqueFinder bicliqueFinder = new BicliqueFinder(new BipartiteGraph(adjMatrix));
-
-        bicliqueFinder.findMaximalBicliques(args[1]);
-
-        // BENCHMARK TESTS FOR RANDOM BINARY MATRIX
+    //    ****TEST 2: Benchmark Testing for Random Input****
 
 //        Random random = new Random();
-//
-//        int size = 8;
-//        for(int i=0;i<size;i++)
+
+//        int rows = 50;
+//        int columns = 50;
+//        double density = 0.2;
+//        for(int i=0;i<rows;i++)
 //        {
 //            adjMatrix.add(new ArrayList<>());
-//            for(int j=0;j<size;j++)
+//            for(int j=0;j<columns;j++)
 //            {
-//                if(random.nextDouble() < 0.4)
+//                if(random.nextDouble() < density)
 //                    adjMatrix.get(i).add(1);
 //                else
 //                    adjMatrix.get(i).add(0);
@@ -56,23 +62,105 @@ public class Solver {
 //
 //        BicliqueFinder bicliqueFinder = new BicliqueFinder(new BipartiteGraph(adjMatrix));
 //
-//
-//        System.out.println("Maximal Bicliques: ");
 //        long startTime = System.currentTimeMillis();
-//        bicliqueFinder.findMaximalBicliques("standard");
+//        bicliqueFinder.solve("MBC");
 //        long endTime = System.currentTimeMillis();
 //
-//        long startTime1 = System.currentTimeMillis();
-//        bicliqueFinder.findMaximalBicliques("improved");
-//        long endTime1 = System.currentTimeMillis();
-//
-//        System.out.println("*******Standard*******");
-//        System.out.println("No. of Maximal Bicliques: "+bicliqueFinder.getMaximalBicliques().size());
+//        System.out.println("*******MBC*******");
+//        System.out.println("MBC:\n"+bicliqueFinder.toStringBicliqueF(bicliqueFinder.getMBC()));
+//        System.out.println("MBC size:"+bicliqueFinder.getMBC().size());
+//        System.out.println("*******Maximal Bicliques*******");
+//        System.out.println("Maximal Bicliques:\n"+bicliqueFinder.toStringBicliqueF(bicliqueFinder.getMBC()));
+//        System.out.println("MBEA size:"+bicliqueFinder.getMBC().size());
 //        System.out.println("Total execution time: " + (endTime-startTime) + "ms");
-//        System.out.println("*******Improved*******");
-//        System.out.println("No. of Maximal Bicliques: "+bicliqueFinder.getMaximalBicliques().size());
-//        System.out.println("Total execution time: " + (endTime1-startTime1) + "ms");
 
+    //    TEST 3: Comparing |R| with A. Ene, W. Horne, N. <ilosavlevic et al., 2008 datasets used for testing their greedy MBC
+        List<List<Integer>> UA = new ArrayList<>();
+        List<List<Integer>> PA = new ArrayList<>();
+        List<List<Integer>> UPA = new ArrayList<>();
+        Scanner input = null;
+        int UArowNum=0,UAcolNum=0,PAcolNum=0;
+
+        try {
+            input = new Scanner(new File("UA_hc.txt"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        while (input.hasNextLine()) {
+            Scanner colReader = new Scanner(input.nextLine());
+            UArowNum = colReader.nextInt();
+            UAcolNum = colReader.nextInt();
+            List<Integer> col = new ArrayList<>();
+            while (colReader.hasNextInt()) {
+                col.add(colReader.nextInt());
+            }
+            UA.add(col);
+        }
+
+        try {
+            input = new Scanner(new File("PA_hc.txt"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        while (input.hasNextLine()) {
+            Scanner colReader = new Scanner(input.nextLine());
+            PAcolNum = colReader.nextInt();
+            List<Integer> col = new ArrayList<>();
+            while (colReader.hasNextInt()) {
+                col.add(colReader.nextInt());
+            }
+            PA.add(col);
+        }
+        System.out.println(UArowNum);
+//        int UArowNum = 3485;
+//        int UAcolNum = 421;
+//        int PAcolNum = 10127;
+
+        for(int i=0;i<UArowNum;i++)
+        {
+            List<Integer> index = new ArrayList<>();
+            List<Integer> UPArow = new ArrayList<>();
+            for(int j=0;j<UAcolNum ;j++)
+            {
+                if(UA.get(i).get(j)==1)
+                {
+                    index.add(j);
+                }
+            }
+
+            for(int q=0;q<PAcolNum;q++)
+            {
+                int element = 0;
+                for(int p:index)
+                    element |= PA.get(p).get(q);
+                UPArow.add(element);
+            }
+            UPA.add(UPArow);
+        }
+
+        System.out.println(UPA.size());
+        System.out.println(UPA.get(0).size());
+//        for(int q=0;q<UArowNum;q++)
+//        {
+//            for (int p = 0; p <PAcolNum; p++)
+//                System.out.print(UPA.get(q).get(p));
+//            System.out.println();
+//        }
+
+        BicliqueFinder bicliqueFinder = new BicliqueFinder(new BipartiteGraph(UPA));
+
+        long startTime = System.currentTimeMillis();
+        bicliqueFinder.solve("MBC");
+        long endTime = System.currentTimeMillis();
+
+        System.out.println("*******MBC*******");
+        System.out.println("MBC:\n"+bicliqueFinder.toStringBicliqueF(bicliqueFinder.getMBC()));
+        System.out.println("MBC size:"+bicliqueFinder.getMBC().size());
+//        System.out.println("maximal bicliques: \n"+bicliqueFinder.toStringBicliqueF(bicliqueFinder.getMaximalBicliques()));
+        System.out.println("Total execution time: " + (endTime-startTime) + "ms");
 
     }
 }
+
