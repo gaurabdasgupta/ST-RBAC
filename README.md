@@ -1,4 +1,4 @@
-# Spatio Temporal Role Mining
+# Spatial Role Mining
 
 ## Maximal Biclique Enumeration Based Role Mining Algorithm
 
