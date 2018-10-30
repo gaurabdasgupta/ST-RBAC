@@ -1,18 +1,16 @@
 # Spatio Temporal Role Mining
 
-## maximal-biclique-enumeration
+## Maximal Biclique Enumeration Based Role Mining Algorithm
 
 ### Usage Instructions:
 
-Run the JAR file with the binary matrix file as argument:
+To compute the roles for the UA and PA files present in the datasets/greedyMBC_Ene_2008 folder, run:
 
-`java -jar MBEA.jar file.txt`
+`java -jar MBEA.jar filename.txt`
 
-#### To test:
+for example:
 
-Go to the `examples` directory and execute it:
-
-`java -jar ST-RBAC.jar matrix.txt`
+`java -jar MBEA.jar domino.txt`
 
 ### TODO:
-- Implement the improved version of MBEA algorithm
+- ~~Optimise the post processing part for computing the number of roles~~
