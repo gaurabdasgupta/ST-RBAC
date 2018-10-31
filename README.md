@@ -6,11 +6,11 @@
 
 To compute the roles for the UA and PA files present in the datasets/greedyMBC_Ene_2008 folder, run:
 
-`java -jar MBEA.jar filename.txt`
+`java -jar SpatialRBAC.jar filename.txt`
 
 for example:
 
-`java -jar MBEA.jar domino.txt`
+`java -jar SpatialRBAC.jar domino.txt`
 
 ### TODO:
 - ~~Optimise the post processing part for computing the number of roles~~
