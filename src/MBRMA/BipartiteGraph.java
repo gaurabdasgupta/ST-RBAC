@@ -11,7 +11,7 @@ public class BipartiteGraph {
     protected List<List<Vertex>> leftNeighbours = new ArrayList<>();
     protected List<List<Vertex>> rightNeighbours = new ArrayList<>();
     BipartiteGraph() {}
-    BipartiteGraph(List<List<Integer>> incMat)
+    public BipartiteGraph(List<List<Integer>> incMat)
     {
         incidenceMatrix = incMat;
 

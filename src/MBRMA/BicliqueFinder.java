@@ -18,7 +18,7 @@ public class BicliqueFinder extends Biclique {
     private HashSet<Pair<Integer,Integer>> vertexSet = new HashSet<>();
 
 
-    BicliqueFinder(BipartiteGraph inGraph)
+    public BicliqueFinder(BipartiteGraph inGraph)
     {
         graph = inGraph;
         initL = new VertexSet(graph.getLeftNodes());
@@ -29,7 +29,7 @@ public class BicliqueFinder extends Biclique {
         MBC = new ArrayList<>();
     }
 
-    void solve(String algType)
+    public void solve(String algType)
     {
         if(algType.equals("standard"))
         {
@@ -46,7 +46,7 @@ public class BicliqueFinder extends Biclique {
         }
     }
 
-    ArrayList<Biclique> getMaximalBicliques()
+    public ArrayList<Biclique> getMaximalBicliques()
     {
         if(foundAll)
             return maximalBicliques;
@@ -59,7 +59,7 @@ public class BicliqueFinder extends Biclique {
         return MBC;
     }
 
-    ArrayList<Biclique> getRoles() {
+    public ArrayList<Biclique> getRoles() {
         return roles;
     }
     String getLRPQinit()
@@ -410,7 +410,7 @@ public class BicliqueFinder extends Biclique {
         return 0;
     }
 
-    String toStringBicliqueF(ArrayList<Biclique> b)
+    public String toStringBicliqueF(ArrayList<Biclique> b)
     {
 
 

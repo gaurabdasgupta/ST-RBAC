@@ -3,7 +3,7 @@ package MBRMA;
 import java.util.ArrayList;
 import java.util.List;
 
-class Vertex{
+public class Vertex{
     private int label;
     private List<Vertex> neighbours  = new ArrayList<>();
 
@@ -18,7 +18,7 @@ class Vertex{
         return neighbours;
     }
 
-    int getLabel()
+    public int getLabel()
     {
         return label;
     }
