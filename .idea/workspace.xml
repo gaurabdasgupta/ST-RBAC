@@ -8,13 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5944e29b-3eb0-4dc2-8833-89aba2b4ee1c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SpatialRBAC/MBRMA/BicliqueFinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpatialRBAC/MBRMA/BicliqueFinder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SpatialRBAC/MBRMA/BipartiteGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpatialRBAC/MBRMA/BipartiteGraph.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SpatialRBAC/MBRMA/Vertex.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpatialRBAC/MBRMA/Vertex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SpatialRBAC/MBRMA/VertexSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpatialRBAC/MBRMA/VertexSet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MBRMA/BicliqueFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MBRMA/BicliqueFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MBRMA/BipartiteGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MBRMA/BipartiteGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MBRMA/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MBRMA/Vertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/TUPA.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/TUPA.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/TUPA_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/TUPA_test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TIR_Miner/Miner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TIR_Miner/Miner.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,8 +43,8 @@
       <file leaf-file-name="Miner.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TIR_Miner/Miner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="129" column="128" selection-start-line="129" selection-start-column="128" selection-end-line="129" selection-end-column="128" />
+            <state relative-caret-position="-2250">
+              <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -158,7 +154,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-470" />
     <option name="y" value="-19" />
     <option name="width" value="1382" />
@@ -170,6 +166,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -203,7 +200,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -367,9 +363,9 @@
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" x="-3" y="106" width="1387" height="561" id="Run" order="2" visible="true" weight="0.24024025" />
+      <window_info active="true" anchor="bottom" x="-3" y="106" width="1387" height="561" id="Run" order="2" visible="true" weight="0.3903904" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14128843" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.090043925" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="4" side_tool="true" />
@@ -506,8 +502,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TIR_Miner/Miner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="129" column="128" selection-start-line="129" selection-start-column="128" selection-end-line="129" selection-end-column="128" />
+        <state relative-caret-position="-2250">
+          <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Scanner;
 import MBRMA.*;
 import javafx.util.Pair;
+import org.omg.PortableInterceptor.INACTIVE;
 
 import javax.management.relation.Role;
 
@@ -36,8 +37,12 @@ class TemporalRole{
         System.out.println("\nPermissions: ");
         for(int x:permissions)
             System.out.print(x+" ");
-        System.out.println("\nDuration: ");
-        System.out.println(duration);
+        System.out.println("\nDuration(s): ");
+        if(containsTwo)
+            for(Pair<Integer, Integer> pr:durations)
+                System.out.print(pr+" ");
+        else
+            System.out.println(duration);
     }
 
 }
@@ -81,6 +86,12 @@ public class Miner {
                 }
                 kUPA.add(kRow);
             }
+            System.out.println("Period:"+period);
+            for(int i=0;i<kUPA.size();i++) {
+                for (int j = 0; j < kUPA.size(); j++)
+                    System.out.print(kUPA.get(i).get(j) + " ");
+                System.out.println();
+            }
             MBRMA.BicliqueFinder b = new BicliqueFinder(new MBRMA.BipartiteGraph(kUPA));
             long startTime = System.currentTimeMillis();
             b.solve("roles");
@@ -98,18 +109,19 @@ public class Miner {
                     role.permissions.add(v.getLabel());
                 ROLES.add(role);
             }
-            System.out.println("Number of roles:"+b.getRoles().size());
-            System.out.println("Total execution time: " + (endTime-startTime) + "ms");
+//            System.out.println("Number of roles:"+b.getRoles().size());
+//            System.out.println("Total execution time: " + (endTime-startTime) + "ms");
         }
 
         for(TemporalRole r:ROLES)
             r.display();
 //        System.out.println(ROLES.size());
-
+// **********For testing merging of roles**********
 //        ROLES.clear();
         TemporalRole r1 = new TemporalRole();
-        r1.permissions.add(99);
-        r1.permissions.add(88);
+        r1.users.add(28);
+        r1.permissions.add(51);
+        r1.permissions.add(58);
         r1.duration = new Pair<Integer, Integer>(8,10);
         ROLES.add(r1);
         System.out.println("old size:"+ROLES.size());
@@ -139,6 +151,8 @@ public class Miner {
                         r.permissions.addAll(bRole.permissions);
                         aRole.isMerged = true;
                         bRole.isMerged = true;
+                        System.out.println("New Role Formed: ");
+                        r.display();
                         newROLES.add(r);
                     }
                     else if(aRole.permissions.equals(bRole.permissions)&&aRole.duration.equals(bRole.duration)&&(!(aRole.isMerged&&bRole.isMerged)))
@@ -153,10 +167,13 @@ public class Miner {
                         r.users.addAll(bRole.users);
                         aRole.isMerged = true;
                         bRole.isMerged = true;
+                        System.out.println("New Role Formed: ");
+                        r.display();
                         newROLES.add(r);
                     }
-                    else if(aRole.permissions.equals(bRole.permissions)&&aRole.duration.equals(bRole.duration)&&(!(aRole.isMerged&&bRole.isMerged)))
+                    else if(aRole.permissions.equals(bRole.permissions)&&aRole.users.equals(bRole.users)&&(!(aRole.isMerged&&bRole.isMerged)))
                     {
+                        System.out.println("here");
                         if(   (Math.abs(aRole.duration.getKey()-bRole.duration.getValue())==1||Math.abs(aRole.duration.getValue()-bRole.duration.getKey())==1)||
                                 (aRole.duration.getKey()>=bRole.duration.getKey()&&aRole.duration.getValue()<=bRole.duration.getValue())||
                                 (bRole.duration.getKey()>=aRole.duration.getKey()&&bRole.duration.getValue()<=bRole.duration.getValue())
@@ -169,6 +186,8 @@ public class Miner {
                             r.duration = new Pair<Integer, Integer>(Math.min(aRole.duration.getKey(), bRole.duration.getKey()),Math.max(aRole.duration.getValue(), bRole.duration.getValue()));
                             aRole.isMerged = true;
                             bRole.isMerged = true;
+                            System.out.println("New Role Formed: ");
+                            r.display();
                             newROLES.add(r);
                         }
                         else
@@ -182,6 +201,8 @@ public class Miner {
                             aRole.isMerged = true;
                             bRole.isMerged = true;
                             r.containsTwo = true;
+                            System.out.println("New Role Formed: ");
+                            r.display();
                             newROLES.add(r);
                         }
 
@@ -197,9 +218,6 @@ public class Miner {
                 newROLES.add(r);
     return newROLES;
     }
-
-
-
 
     public static void main(String args[]) throws FileNotFoundException {
         File file = new File("datasets/TUPA.txt");
@@ -235,11 +253,9 @@ public class Miner {
 //            System.out.println();
 //        }
 
-
         uniquePeriods.remove(new Pair<Integer, Integer>(0,0));
-        System.out.println(thirdPhase(secondPhase(TUPA, uniquePeriods)).size());
+
+        System.out.println("\nNumber of Roles after merging phase: "+thirdPhase(secondPhase(TUPA, uniquePeriods)).size());
 
     }
 }
-
-
