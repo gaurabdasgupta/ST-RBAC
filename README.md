@@ -14,3 +14,5 @@ for example:
 
 ### TODO:
 - ~~Optimise the post processing part for computing the number of roles~~
+- Test with custom TUPA
+
