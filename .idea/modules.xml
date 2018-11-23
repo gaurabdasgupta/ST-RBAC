@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SpatialRBAC.iml" filepath="$PROJECT_DIR$/SpatialRBAC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TemporalRBAC.iml" filepath="$PROJECT_DIR$/TemporalRBAC.iml" />
     </modules>
   </component>
 </project>

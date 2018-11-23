@@ -2,7 +2,7 @@
   <artifact type="jar" name="SpatialRBAC:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/SpatialRBAC_jar</output-path>
     <root id="archive" name="SpatialRBAC.jar">
-      <element id="module-output" name="SpatialRBAC" />
+      <element id="module-output" name="TemporalRBAC" />
     </root>
   </artifact>
 </component>
